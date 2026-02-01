@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>Student Registration Form</title>
+
+<!-- CSS -->
+<style>
+body {
+font-family: Arial;
+background-color: #f2f2f2;
+}
+h2 {
+text-align: center;
+}
+table {
+margin: auto;
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+}
+td {
+padding: 8px;
+}
+input, textarea {
+width: 95%;
+padding: 5px;
+}
+.btn {
+width: 100px;
+padding: 8px;
+font-weight: bold;
+}
+</style><!-- JavaScript -->
+<script>
+function validateForm() {
+var name = document.getElementById("sname").value;
+var email = document.getElementById("email").value;
+var mobile = document.getElementById("mobile").value;
+if (name == "") {
+alert("Please enter Student Name");
+return false;
+}
+if (email == "") {
+alert("Please enter Email ID");
+return false;
+}
+if (mobile == "" || mobile.length != 10) {
+alert("Please enter valid 10 digit Mobile Number");
+return false;
+}
+alert("Form Submitted Successfully");
+return true;
+}
+</script>
+</head><body>
+<h2>Student Registration Form</h2>
+<form onsubmit="return validateForm()">
+<table border="1">
+<tbody>
+<tr>
+<td>Student Name</td>
+<td><input id="sname" type="text"></td>
+</tr>
+<tr>
+<td>Father Name</td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td>Date of Birth</td>
+<td><input type="date"></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input name="gender" type="radio"> Male
+<input name="gender" type="radio"> Female
+</td>
+</tr>
+<tr>
+<td>Address</td>
+<td><textarea rows="4"></textarea></td>
+</tr>
+<tr>
+<td>Hobbies</td>
+<td>
+<input type="checkbox"> Reading
+<input type="checkbox"> Sports
+<input type="checkbox"> Music
+</td>
+</tr>
+<tr>
+<td>Email ID</td>
+<td><input id="email" type="email"></td>
+</tr>
+<tr>
+<td>Mobile No</td>
+<td><input id="mobile" type="text"></td>
+</tr>
+<tr>
+<td align="center">
+<input value="Submit" class="btn" type="submit"></td>
+<td align="center">
+<input value="Reset" class="btn" type="reset"></td>
+</tr>
+</tbody>
+</table>
+</form>
+</body></html>

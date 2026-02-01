@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>Facebook Sign Up</title>
+
+<!-- CSS -->
+<style>
+body {
+font-family: Arial;
+background-color: #f0f2f5;
+}
+.container {
+width: 400px;
+background-color: white;
+padding: 20px;
+margin: auto;
+margin-top: 50px;
+border-radius: 8px;
+box-shadow: 0 0 10px #ccc;
+}
+.logo {
+text-align: center;
+margin-bottom: 10px;
+}
+.logo img {
+width: 180px;
+}
+h1 {
+text-align: center;
+color: #1877f2;
+}
+input[type=text],
+input[type=password],
+input[type=date] {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+}
+.signup-btn {
+background-color: #42b72a;
+color: white;
+border: none;
+padding: 10px;
+width: 100%;
+font-size: 16px;
+cursor: pointer;
+}
+</style>
+<!-- JavaScript -->
+<script>
+function validateForm() {
+var fname = document.forms["signup"]["fname"].value;
+var mobile = document.forms["signup"]["mobile"].value;
+var password = document.forms["signup"]["password"].value;
+if (fname == "" || mobile == "" || password == "") {
+alert("All fields must be filled");
+return false;
+}
+return true;
+}
+</script>
+</head><body>
+<div class="container">
+<!-- Facebook Logo -->
+<div class="logo">
+<img src="facebook_logo.png" alt="Facebook Logo">
+</div>
+<!-- Main Heading -->
+<h1>Create a New Account</h1>
+<!-- Sign Up Form -->
+<form name="signup" onsubmit="return validateForm()">
+First Name:
+<input name="fname" type="text"><br><br>
+Surname:
+<input name="surname" type="text"><br><br>
+Mobile No:
+<input name="mobile" type="text"><br><br>
+New Password:
+<input name="password" type="password"><br><br>
+Date of Birth:
+<input name="dob" type="date"><br><br>
+Gender:<br>
+<input name="gender" type="radio"> Male
+<input name="gender" type="radio"> Female
+<input name="gender" type="radio"> Other
+<br><br>
+<!-- Sign Up Button -->
+<input class="signup-btn" value="Sign Up" type="submit">
+</form>
+</div>
+</body></html>
